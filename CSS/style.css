@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5f1;
+    color: #222;
+}
+
+header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+}
+
+.tools {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+article {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+main > h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.tools article h3 {
+   margin-top: 0;
+}
+
+.tools article p {
+   color: #666;
+}
+
+button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+header {
+   border-bottom: 1px solid #e5e5e5;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav a {
+    transition: color 0.2s ease;
+}
+
+button {
+    background-color: #222;
+    color: white;
+    transition: background-color 0.2s ease,opacity 0.2s ease;
+}
+
+button:hover {
+   transform: translateY(-2px);
+   opacity: 0.9;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #777;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .tools {
+        grid-template-columns: 1fr;
+    }
+}
+
+section {
+    margin-top: 50px;
+}
+
+.tools article {
+    display: flex;
+    flex-direction: column;
+}
+
+.tools article button {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.tool article:hover {
+    transform: translateY(-4px);
+}
+
+.tools article {
+    transition: transform 0.2s ease;
+}
+
+.tools article {
+    min-height: 220px;
+}
+
+.tools article h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tools article p {
+    line-height: 1.6;
+}
