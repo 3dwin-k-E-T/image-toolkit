@@ -2,9 +2,14 @@
     box-sizing: border-box;
 }
 
+:root{
+    --accent-color: #8b7bb8;
+    --acent-soft:#29243a;
+}
+
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #0f1014;
     color: #e8e8ee;
 
@@ -131,13 +136,18 @@ main {
 }
 
 .hero h2 {
+    margin: 0 0 14px;
     font-size: 48px;
-    margin: 10px 0;
+    font-weight: 700;
+    letter-spacing: -1.5px;
 }
 
-.hero p {
-    color: #9ea1ae;
-    line-height: 1.6;
+.hero p:first-child {
+     margin: 0 0 8px;
+     color: #8b7bb8;
+     font-size: 12px;
+     font-weight: 600;
+     letter-spacing: 2px;
 }
 
 /* TARJETAS */
@@ -150,38 +160,51 @@ main {
 
 .tool-card {
     min-height: 300px;
+    padding: 26px; 
+    
+    background: linear-gradient(145deg, #181a21, #13151a);
 
-    padding: 24px;
-
-    background-color: #15171d;
     border: 1px solid #292b33;
-    border-radius: 14px;
+    border-radius: 16px;
 
     display: flex;
     flex-direction: column;
 
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .tool-card:hover {
     transform: translateY(-4px);
-    border-color: #4a465b;
+    border-color: #51476d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .tool-card h3 {
-    font-size: 20px;
-    margin: 0 0 10px;
+   font-size: 21px;
+   font-weight: 600;
+   margin: 0 0 12px;
+   letter-spacing: -0.3px;
 }
 
 .tool-card p {
+    margin: 0;
     color: #9ea1ae;
     line-height: 1.6;
+    font-size: 14px;
 }
 
 .tool-card span {
-    margin-top: auto;
-    color: #858896;
-    font-size: 14px;
+    margin-top:auto;
+    align-self: flex-start;
+
+    padding: 6px 10px;
+
+    background-color: var(--accent--soft);
+    color: #bdb2dc;
+
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 /* BOTONES */
@@ -286,8 +309,8 @@ aside p {
 }
 
 aside a.active {
-    background-color: #242630;
-    color: #e8e8ee;
+    background-color: var(--accent--soft);
+    color: #cfc5eb;
 }
 
 .tool-card button {
@@ -299,3 +322,10 @@ aside a.active {
     border-radius: 50%;
 }
 
+aside a {
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+aside a:hover {
+    transform: translateX(4px);
+}
