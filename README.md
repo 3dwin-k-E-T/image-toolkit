@@ -9,10 +9,11 @@ para las herramientas, sin implementar editores.
 ```text
 index.html
 README.md
-Assets/
 CSS/
   main.css
   editor.css
+  favicon/
+    layout.css
 JS/
   main.js
   editor.js

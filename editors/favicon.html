@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crear favicon — Image Toolkit</title>
+    <title>Favicon Studio — Image Toolkit</title>
+    <meta name="description" content="Espacio de trabajo para crear favicons. Herramienta en desarrollo." />
     <link rel="stylesheet" href="../CSS/main.css" />
     <link rel="stylesheet" href="../CSS/editor.css" />
+    <link rel="stylesheet" href="../CSS/favicon/layout.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,9 +18,51 @@
       <a class="back-link" href="../index.html">← Volver al inicio</a>
     </header>
 
-    <main class="site-main">
-      <section class="editor-notice">
-        <p>Esta herramienta está en desarrollo.</p>
+    <main class="site-main fs-editor" aria-label="Favicon Studio">
+      <section class="fs-document-bar" aria-label="Documento y exportación">
+        <p class="fs-document-name">Sin título</p>
+        <p class="fs-export-note">Exportación disponible en una fase posterior</p>
+      </section>
+
+      <section class="fs-workspace" role="group" aria-label="Área de trabajo">
+        <section class="fs-toolbar" aria-label="Herramientas">
+          <h2 class="fs-section-title">HERRAMIENTAS</h2>
+          <p class="fs-panel-note">Disponible en una fase posterior</p>
+        </section>
+
+        <section class="fs-stage" aria-label="Lienzo">
+          <h2 class="fs-section-title fs-stage-title">LIENZO</h2>
+          <div class="fs-canvas-area" role="img" aria-label="Lienzo cuadrado vacío con patrón de transparencia">
+            <p class="fs-canvas-prompt">Arrastra una imagen aquí</p>
+          </div>
+        </section>
+
+        <section class="fs-properties" aria-label="Propiedades">
+          <h2 class="fs-section-title">PROPIEDADES</h2>
+          <p class="fs-panel-note">Disponible en una fase posterior</p>
+        </section>
+      </section>
+
+      <section class="fs-previews" aria-label="Previsualización">
+        <h2 class="fs-section-title">PREVISUALIZACIÓN</h2>
+        <div class="fs-preview-list">
+          <div class="fs-preview-item">
+            <span class="fs-preview-square fs-preview-16" aria-hidden="true"></span>
+            <span class="fs-preview-label">16 px</span>
+          </div>
+          <div class="fs-preview-item">
+            <span class="fs-preview-square fs-preview-32" aria-hidden="true"></span>
+            <span class="fs-preview-label">32 px</span>
+          </div>
+          <div class="fs-preview-item">
+            <span class="fs-preview-square fs-preview-48" aria-hidden="true"></span>
+            <span class="fs-preview-label">48 px</span>
+          </div>
+          <div class="fs-preview-item">
+            <span class="fs-preview-square fs-preview-180" aria-hidden="true"></span>
+            <span class="fs-preview-label">180 px</span>
+          </div>
+        </div>
       </section>
     </main>
 

@@ -361,6 +361,7 @@ body {
 .tool-card .tool-count,
 .tool-card .availability-label {
     align-self: flex-start;
+    margin-top: 10px;
 
     padding: 5px 8px;
 
@@ -376,10 +377,6 @@ body {
 
 .tool-card .tool-count {
     margin-top: auto;
-}
-
-.tool-card .availability-label {
-    margin-top: 10px;
 }
 
 

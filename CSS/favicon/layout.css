@@ -1,0 +1,257 @@
+.fs-editor {
+    display: grid;
+    grid-template-rows: 56px minmax(0, 1fr) 226px;
+    min-height: 0;
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.fs-document-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-width: 0;
+    padding: 0 24px;
+
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.fs-document-name,
+.fs-export-note {
+    margin: 0;
+}
+
+.fs-document-name {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.fs-export-note,
+.fs-panel-note {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.fs-workspace {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr) 260px;
+    min-width: 0;
+    min-height: 0;
+}
+
+.fs-toolbar,
+.fs-properties {
+    min-width: 0;
+    min-height: 0;
+    padding: 24px;
+    overflow-y: auto;
+
+    background-color: var(--surface);
+}
+
+.fs-toolbar {
+    border-right: 1px solid var(--border);
+}
+
+.fs-properties {
+    border-left: 1px solid var(--border);
+}
+
+.fs-section-title {
+    margin: 0;
+
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.fs-panel-note {
+    margin: 16px 0 0;
+    line-height: 1.5;
+}
+
+.fs-stage {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    min-height: 0;
+    padding: 16px;
+    overflow: auto;
+}
+
+.fs-stage-title {
+    justify-self: start;
+    width: 100%;
+}
+
+.fs-canvas-area {
+    display: grid;
+    place-items: center;
+    width: min(100%, clamp(160px, calc(100vh - 480px), 560px));
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--border);
+    background-color: var(--surface);
+    background-image: conic-gradient(
+        var(--surface-light) 25%,
+        transparent 0 50%,
+        var(--surface-light) 0 75%,
+        transparent 0
+    );
+    background-size: 32px 32px;
+}
+
+.fs-canvas-prompt {
+    margin: 0;
+    padding: 16px;
+    color: var(--text-soft);
+    font-size: 14px;
+    text-align: center;
+}
+
+.fs-previews {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    align-items: center;
+    gap: 20px;
+    min-width: 0;
+    padding: 12px 24px;
+
+    background-color: var(--surface);
+    border-top: 1px solid var(--border);
+}
+
+.fs-preview-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 24px;
+    min-width: 0;
+}
+
+.fs-preview-item {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.fs-preview-square {
+    display: block;
+    border: 1px solid var(--border);
+    background-color: transparent;
+}
+
+.fs-preview-16 {
+    width: 16px;
+    height: 16px;
+}
+
+.fs-preview-32 {
+    width: 32px;
+    height: 32px;
+}
+
+.fs-preview-48 {
+    width: 48px;
+    height: 48px;
+}
+
+.fs-preview-180 {
+    width: 180px;
+    height: 180px;
+}
+
+.fs-preview-label {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+@media (min-width: 700px) and (max-width: 1023px) {
+    .fs-workspace {
+        grid-template-columns: 200px minmax(0, 1fr) 200px;
+    }
+
+    .fs-toolbar,
+    .fs-properties {
+        padding: 20px;
+    }
+
+    .fs-previews {
+        grid-template-columns: 140px minmax(0, 1fr);
+        gap: 12px;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .fs-preview-list {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 699px) {
+    .fs-editor {
+        grid-template-rows: 56px auto auto auto auto;
+        overflow: visible;
+    }
+
+    .fs-document-bar {
+        padding: 0 16px;
+    }
+
+    .fs-export-note {
+        max-width: 52%;
+        text-align: right;
+    }
+
+    .fs-workspace {
+        display: contents;
+    }
+
+    .fs-stage {
+        grid-row: 2;
+        min-height: 340px;
+        padding: 20px;
+    }
+
+    .fs-canvas-area {
+        width: min(100%, 420px);
+    }
+
+    .fs-previews {
+        grid-row: 3;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .fs-preview-list {
+        gap: 20px;
+    }
+
+    .fs-toolbar,
+    .fs-properties {
+        padding: 20px;
+        overflow: visible;
+        border-top: 1px solid var(--border);
+        border-right: 0;
+        border-left: 0;
+    }
+
+    .fs-toolbar {
+        grid-row: 4;
+    }
+
+    .fs-properties {
+        grid-row: 5;
+    }
+}
