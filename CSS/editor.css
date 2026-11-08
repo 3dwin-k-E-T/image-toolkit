@@ -1,1 +1,47 @@
 
+.editor-page {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 76px 1fr auto;
+}
+
+.editor-page .site-sidebar {
+    display: none;
+}
+
+.editor-page .site-header {
+    grid-column: 1 / -1;
+}
+
+.editor-page .site-main {
+    grid-column: 1;
+    grid-row: 2;
+
+    max-width: none;
+    margin: 0;
+}
+
+.editor-page .editor-notice {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px;
+
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    color: var(--text-soft);
+    text-align: center;
+}
+
+.editor-page .editor-notice p {
+    margin: 0;
+}
+
+.editor-page .back-link {
+    color: var(--text-soft);
+    text-decoration: none;
+}
+
+.editor-page .back-link:hover {
+    color: var(--text);
+}

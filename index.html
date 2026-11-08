@@ -3,49 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Image Toolkit — Edita, mejora y transforma tus imágenes</title>
+    <meta name="description" content="Edita, mejora y transforma tus imágenes con Image Toolkit.">
     <link rel="stylesheet" href="CSS/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <h1>Image Toolkit</h1>
 
       <div class="search">
-        <input type="text" placeholder="Buscar herramienta...">
+        <input type="text" aria-label="Buscar herramienta" placeholder="Buscar herramienta...">
       </div>
 
-      <nav>
-        <a href="#">☼</a>
-        <a href="#">●</a>
+      <nav class="site-nav" aria-label="Acciones del sitio">
+        <button type="button" aria-label="Cambiar tema" title="Próximamente" disabled>☼</button>
+        <button type="button" aria-label="Perfil" title="Próximamente" disabled>●</button>
       </nav>
     </header>
 
-    <aside>
-      <a href="#" class="active">⌂ &nbsp; Inicio</a>
-      <a href="#">▣ &nbsp; Mis proyectos</a>
-      <a href="#">★ &nbsp; Favoritos</a>
+    <aside class="site-sidebar">
+      <nav class="sidebar-nav" aria-label="Principal">
+        <a href="index.html" aria-current="page"><span aria-hidden="true">⌂</span>Inicio</a>
+        <a class="is-disabled" aria-disabled="true"><span aria-hidden="true">▣</span>Mis proyectos<span class="coming-soon">Próximamente</span></a>
+        <a class="is-disabled" aria-disabled="true"><span aria-hidden="true">★</span>Favoritos<span class="coming-soon">Próximamente</span></a>
 
-      <hr>
+        <hr>
 
-      <p>HERRAMIENTAS</p>
+        <p>HERRAMIENTAS</p>
 
-      <a href="#">▧ &nbsp; Edición básica</a>
-      <a href="#">◇ &nbsp; Crear favicon</a>
-      <a href="#">✦ &nbsp; Fondo e IA</a>
-      <a href="#">⚙ &nbsp; Herramientas avanzadas</a>
+        <a href="editors/edicion-basica.html"><span aria-hidden="true">▧</span>Edición básica</a>
+        <a href="editors/favicon.html"><span aria-hidden="true">◇</span>Crear favicon</a>
+        <a href="editors/fondo-ia.html"><span aria-hidden="true">✦</span>Fondo e IA</a>
+        <a href="editors/avanzadas.html"><span aria-hidden="true">⚙</span>Herramientas avanzadas</a>
 
-      <hr>
+        <hr>
 
-      <p>INFORMACIÓN</p>
+        <p>INFORMACIÓN</p>
 
-      <a href="#">ⓘ &nbsp; Acerca de</a>
-      <a href="#">? &nbsp; Ayuda</a>
+        <a class="is-disabled" aria-disabled="true"><span aria-hidden="true">ⓘ</span>Acerca de<span class="coming-soon">Próximamente</span></a>
+        <a class="is-disabled" aria-disabled="true"><span aria-hidden="true">?</span>Ayuda<span class="coming-soon">Próximamente</span></a>
+      </nav>
     </aside>
 
-    <main>
+    <main class="site-main">
       <section class="hero">
         <p>BIENVENIDO A</p>
         <h2>Image Toolkit</h2>
@@ -59,32 +62,34 @@
           <h3>Edición básica</h3>
           <p>Edita, convierte y optimiza tus imágenes de forma fácil y
             rápida.</p>
-          <span>30 herramientas</span>
-          <a href="editors/edicion-basica.html" class="tool-button">→</a>
+          <span class="tool-count">30 herramientas</span>
+          <a href="editors/edicion-basica.html" class="tool-button" aria-label="Abrir Edición básica">→</a>
         </article>
 
         <article class="tool-card">
           <h3>Crear favicon</h3>
           <p>Convierte tus imágenes en favicons listos para usar en tu sitio
             web.</p>
-          <span>1 herramienta</span>
-          <button>→</button>
+          <span class="tool-count">1 herramienta</span>
+          <a href="editors/favicon.html" class="tool-button" aria-label="Abrir Crear favicon">→</a>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card is-disabled">
           <h3>Fondo e IA</h3>
           <p>Quita, cambia y transforma fondos, elimina objetos y mejora tus
             imágenes.</p>
-          <span>6 herramientas</span>
-          <button>→</button>
+          <span class="tool-count">6 herramientas</span>
+          <span class="availability-label">Próximamente</span>
+          <a class="tool-button" aria-label="Fondo e IA: Próximamente" aria-disabled="true">→</a>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card is-disabled">
           <h3>Herramientas avanzadas</h3>
           <p>Funciones profesionales para un control total de tus imágenes y
             proyectos.</p>
-          <span>9 herramientas</span>
-          <button>→</button>
+          <span class="tool-count">9 herramientas</span>
+          <span class="availability-label">Próximamente</span>
+          <a class="tool-button" aria-label="Herramientas avanzadas: Próximamente" aria-disabled="true">→</a>
         </article>
 
       </section>
@@ -113,7 +118,7 @@
 
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>&copy; 2026 Image Toolkit. proyecto en desarrollo.</p>
     </footer>
   </body>
